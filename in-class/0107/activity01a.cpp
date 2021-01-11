@@ -2,5 +2,12 @@
 using namespace std;
 
 int main() {
-  cout << "Go!$\backslash$n";
+    int userAge=20
+   
+    cout << "Hello my I am " << endl;
+    cout << userAge << endl;
+    cout << "years old";
+
+    return 0;
+
 }

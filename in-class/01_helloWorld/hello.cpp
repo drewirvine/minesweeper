@@ -14,7 +14,7 @@ using namespace std;
 int main() {
    
     // print out some text (replace the question mark with your name)
-    cout << "Hello World! My name is ? and this may be my first program in CPTR 141!" << endl;
+    cout << "Hello World! My name is Drew Irvine and this may be my first program in CPTR 141!" << endl;
 
     return 0;
 }
