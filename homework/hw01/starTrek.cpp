@@ -23,17 +23,19 @@ int main() {
   string userVerb;
 
   // gather user input using cin << variableName
-  cout << "Enter a noun:";
-  cin >> userNounOne;
-  cout << "Enter a second noun:";
+  cout << " Enter a noun: "; 
+  cin >> userNounOne; 
+  cout << "Enter a second noun: "; 
   cin >> userNounTwo;
-  cout << "Enter a measure of time:";
+  cout << "Enter a number: ";
+  cin >> userNumber;
+  cout << "Enter a measure of time: ";
   cin >> userTime;
-  cout << "Enter an adjective:";
+  cout << "Enter an adjective: ";
   cin >> userAdjective;
-  cout << "Enter a second adjective:";
+  cout << "Enter a second adjective: ";
   cin >> userAdjectiveTwo;
-  cout << "Enter a verb:";
+  cout << "Enter a verb: ";
   cin >> userVerb;
 
   // print out the intro
@@ -41,7 +43,7 @@ int main() {
   cout << userNounOne << ", the final frontier" << endl;
   cout << "These are the voyages of the " << userNounTwo << " Enterprise."
        << endl;
-  cout << "Its seven " << userTime << " mission" << endl;
+  cout << "Its " << userNumber << " " << userTime << " mission" << endl;
   cout << "To explore " << userAdjective << " new worlds" << endl;
   cout << "To seek out " << userAdjectiveTwo << " life" << endl;
   cout << "And " << userAdjectiveTwo << " civilizations" << endl;
