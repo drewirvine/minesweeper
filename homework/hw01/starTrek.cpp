@@ -23,7 +23,7 @@ int main() {
   string userVerb;
 
   // gather user input using cin << variableName
-  cout << " Enter a noun: "; 
+  cout << "Enter a noun: "; 
   cin >> userNounOne; 
   cout << "Enter a second noun: "; 
   cin >> userNounTwo;
@@ -47,7 +47,7 @@ int main() {
   cout << "To explore " << userAdjective << " new worlds" << endl;
   cout << "To seek out " << userAdjectiveTwo << " life" << endl;
   cout << "And " << userAdjectiveTwo << " civilizations" << endl;
-  cout << "To boldy " << userVerb << " where no one has gone before" << endl;
+  cout << "To boldly " << userVerb << " where no one has gone before" << endl;
 
   return 0;
 }
