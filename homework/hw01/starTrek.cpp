@@ -23,9 +23,9 @@ int main() {
   string userVerb;
 
   // gather user input using cin << variableName
-  cout << "Enter a noun: "; 
-  cin >> userNounOne; 
-  cout << "Enter a second noun: "; 
+  cout << "Enter a noun: ";
+  cin >> userNounOne;
+  cout << "Enter a second noun: ";
   cin >> userNounTwo;
   cout << "Enter a number: ";
   cin >> userNumber;
