@@ -41,7 +41,7 @@ int main() {
   // print out the intro
   cout << endl;
   cout << userNounOne << ", the final frontier" << endl;
-  cout << "These are the voyages of the " << userNounTwo << " Enterprise."
+  cout << "These are the voyages of the " << userNounTwo << " Enterprise"
        << endl;
   cout << "Its " << userNumber << " " << userTime << " mission" << endl;
   cout << "To explore " << userAdjective << " new worlds" << endl;
