@@ -47,14 +47,5 @@ int main() {
   cout << "And " << userAdjectiveTwo << " civilizations" << endl;
   cout << "To boldy " << userVerb << " where no one has gone before" << endl;
 
-  /* Words:
-  Noun = Pizza
-  Second Noun = windmill
-  Measure of Time = second
-  Adjective = silly
-  Adjective 2 = weird
-  Verb = dance
-  **********************/
-
   return 0;
 }
