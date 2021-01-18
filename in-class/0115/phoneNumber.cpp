@@ -26,6 +26,10 @@ int main() {
   cin >> phone;
 
   // Display information
+  //phone.length();
+  cout << "You entered " << phone.length() << " digits, the first was \"" << phone.at(0) << "\"" << endl;
+//cout << "Formatted: " << phone.insert(0,) << endl; 
+  cout << 
 
   // Format the phone number
 
