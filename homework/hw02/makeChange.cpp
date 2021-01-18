@@ -45,39 +45,39 @@ int main() {
   change = amountPaid - totalCost; // 31.41
   change = change * 100;           // 3141
 
-  cout << "Your change is: " << endl;
+  cout << "Your change is:  " << endl;
   // How many twenties can I fit? (21.68) (25)
   numTwenties = change / TWENTY_AMOUNT;
   change = change - (numTwenties * TWENTY_AMOUNT);
-  cout << " - twenty-dollar bills: " << numTwenties << endl;
+  cout << "  - twenty-dollar bills: " << numTwenties << endl;
   // How many Tens?
   numTens = change / TEN_AMOUNT;
   change = change - (numTens * TEN_AMOUNT);
-  cout << " - ten-dollar bills: " << numTens << endl;
+  cout << "  - ten-dollar bills: " << numTens << endl;
   // How many Fives?
   numFives = change / FIVE_AMOUNT;
   change = change - (numFives * FIVE_AMOUNT);
-  cout << " - five-dollar bills: " << numFives << endl;
+  cout << "  - five-dollar bills: " << numFives << endl;
   // How many Ones?
   numOnes = change / ONE_AMOUNT;
   change = change - (numOnes * ONE_AMOUNT);
-  cout << " - one-dollar bills: " << numOnes << endl;
+  cout << "  - one-dollar bills: " << numOnes << endl;
   // How many Quarters?
   numQuarters = change / QUARTER_AMOUNT;
   change = change - (numQuarters * QUARTER_AMOUNT);
-  cout << " - quaters: " << numQuarters << endl;
+  cout << "  - quarters: " << numQuarters << endl;
   // How many Dimes?
   numDimes = change / DIME_AMOUNT;
   change = change - (numDimes * DIME_AMOUNT);
-  cout << " - dimes: " << numDimes << endl;
+  cout << "  - dimes: " << numDimes << endl;
   // How many Nickels?
   numNickles = change / NICKLE_AMOUNT;
   change = change - (numNickles * NICKLE_AMOUNT);
-  cout << " - nickels: " << numNickles << endl;
+  cout << "  - nickels: " << numNickles << endl;
   // How many Pennies?
   numPennies = change / PENNY_AMOUNT;
   change = change - (numPennies * PENNY_AMOUNT);
-  cout << " - pennies: " << numPennies << endl;
+  cout << "  - pennies: " << numPennies << endl;
   // cout << "change: " << change << endl;
 
   return 0;
