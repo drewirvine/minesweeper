@@ -45,7 +45,7 @@ int main() {
   change = amountPaid - totalCost; // 31.41
   change = change * 100;           // 3141
 
-  cout << "Your change is:  " << endl;
+  cout << "Your change is:" << endl;
   // How many twenties can I fit? (21.68) (25)
   numTwenties = change / TWENTY_AMOUNT;
   change = change - (numTwenties * TWENTY_AMOUNT);
