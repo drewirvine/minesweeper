@@ -78,7 +78,7 @@ int main() {
   numPennies = change / PENNY_AMOUNT;
   change = change - (numPennies * PENNY_AMOUNT);
   cout << "  - pennies: " << numPennies << endl;
-  // cout << "change: " << change << endl;
+  //cout << "change: " << change << endl;
 
   return 0;
 }

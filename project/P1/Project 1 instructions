@@ -1,0 +1,40 @@
+Specific Solution
+
+Start at 0 
+Use the 4 unit rod to measure 4 to the right
+Mark the position 4
+Use the 9 unit rod to measure 9 to the right from the position marked in 3
+Mark the position 13
+Use the 4 unit rod to measure 4 to the left from the position marked in 5
+Mark the position 9
+Use the 4 unit rod to measure 4 to the left from the position marked in 7
+Mark the position 5
+Use the 9 unit rod to measure 9 to the right from the position marked in 9
+Mark the position 14
+Use the 4 unit rod to measure 4 to the left from the position marked in 11
+Mark the position 10
+Use the 4 unit rod to measure 9 to the right from the position marked in 15
+Mark the position 6
+Use the 9 unit rod to measure 9 to the right from the position marked in 17
+Mark the position 15
+Use the 4 unit rod to measure 4 to the left from the position in 19
+Mark the position 11
+Use the 4 unit rod to measure 4 to the left from the position in 21
+Mark the position 7
+End measuring. 
+
+General Solution
+
+Longer rod = m
+shorter rod = n
+If either rod (m or n) = 1, you don't need this algorithm 
+Start at 0
+Use rod n to measure to the right
+Mark the position and check for 7
+Use rod m to measure to the right from the position marked in prior step
+Mark the position and check for 7
+Use rod n to measure to the left from the position marked in prior step
+Mark the position and check for 7
+Use rod n to measure to the left from the position marked in prior step
+Mark the position and check for 7
+Repeat steps (34-39) until you reach desired length of 7
