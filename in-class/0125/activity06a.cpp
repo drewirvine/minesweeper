@@ -9,7 +9,9 @@ int main() {
   cin >> salePrice;
   int percentOff = ((originalPrice - salePrice) / originalPrice) * 100;
   cout << "Percent off: " << percentOff << "%" << endl;
-  if (percentOff >= 50) {	
+  if (percentOff >= 50) {
     cout << "You found a great deal!" << endl;
-  }   
+    cout << "Congratulations!" << endl;
+  }
+  cout << "Done!" << endl;
 }

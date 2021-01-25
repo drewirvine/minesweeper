@@ -7,11 +7,22 @@ int main() {
   cin >> grade;
   if (grade >= 90) {
     cout << "Very Good!" << endl;
-  } else {
-    if (grade >= 60) {
-      cout << "Satisfactory." << endl;
-    } else {
-      cout << "Poor." << endl;
-    }
+  }else if (grade >= 80) {
+  cout << "Good." << endl;
+  } else if (grade >= 60) {
+    cout << "Satisfactory." << endl;
+  } else { 
+    cout << "Poor." << endl;
   }
 }
+
+//   if (grade >= 90) {
+//     cout << "Very Good!" << endl;
+//   } else {
+//     if (grade >= 60) {
+//       cout << "Satisfactory." << endl;
+//     } else {
+//       cout << "Poor." << endl;
+//     }
+//   }
+// }

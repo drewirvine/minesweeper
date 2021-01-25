@@ -5,7 +5,7 @@
  *       dependents.
  *
  * File Name: paycheck.cpp
- * Name:      ?
+ * Name:      Drew Irvine
  * Course:    CPTR 141
  *
  */
@@ -39,6 +39,7 @@ int main() {
   cout << "Enter the number of dependants: ";
   cin >> numberDependants;
   cout << endl;
+  
   // compute gross pay
   if (hours < OT_HOURS) {
     cout << "Your gross pay is: $" << hours * hourlyWage << endl;
