@@ -36,7 +36,7 @@ int main() {
 
   cout << "Enter the number of hours worked: ";
   cin >> hours;
-  cout << "Enter the number of dependants: ";
+  cout << "Enter the number of dependents: ";
   cin >> numberDependants;
   cout << endl;
   
@@ -50,6 +50,10 @@ int main() {
     GROSS_PAY = 40 * hourlyWage + (hours - 40) * (OT_PAY);
   }
 
+    // rounding
+  int temp = (GROSS_PAY + 0.005) * 100;
+  withholdings = temp / 100.0;
+
   // compute withholdings
   socialSecurity = SOCIAL_SECURITY * GROSS_PAY;
   mediCare = MEDICARE * GROSS_PAY;
@@ -58,11 +62,11 @@ int main() {
   withholdings = socialSecurity + mediCare + federalIncomeTax + healthCare;
 
   // rounding
-  int temp = (withholdings + 0.005) * 100;
+   temp = (withholdings + 0.005) * 100;
   withholdings = temp / 100.0;
 
   // result of withholdings
-  cout << "Your withholdings are: $" << withholdings << endl;
+  cout << "The withholdings are: $" << withholdings << endl;
 
   // Calculations of net pay
   cout << "So that your net pay is: $" << GROSS_PAY - withholdings << endl;
