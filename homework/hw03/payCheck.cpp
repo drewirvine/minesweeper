@@ -40,13 +40,14 @@ int main() {
   cout << "Enter the number of dependents: ";
   cin >> numberDependants;
   cout << endl;
-cout << fixed << setprecision(2);
+  cout << fixed << setprecision(2) << endl;
   // compute gross pay
   if (hours < OT_HOURS) {
     cout << "Your gross pay is: $" << hours * hourlyWage << endl;
     GROSS_PAY = hours * hourlyWage;
   } else {
-    cout << "Your gross pay is: $" << 40 * hourlyWage + (hours - 40) * (OT_PAY) << endl;
+    cout << "Your gross pay is: $" << 40 * hourlyWage + (hours - 40) * (OT_PAY)
+         << endl;
     GROSS_PAY = 40 * hourlyWage + (hours - 40) * (OT_PAY);
   }
 
