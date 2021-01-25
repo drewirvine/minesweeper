@@ -11,6 +11,7 @@
  */
 
 #include <iomanip>
+#include <ios>
 #include <iostream>
 using namespace std;
 
@@ -45,14 +46,14 @@ int main() {
     cout << "Your gross pay is: $" << hours * hourlyWage << endl;
     GROSS_PAY = hours * hourlyWage;
   } else {
-    cout << "Your gross pay is: $" << 40 * hourlyWage + (hours - 40) * (OT_PAY)
+    cout << "Your gross pay is: $" << setprecision(5) << 40 * hourlyWage + (hours - 40) * (OT_PAY)
          << endl;
     GROSS_PAY = 40 * hourlyWage + (hours - 40) * (OT_PAY);
   }
 
     // rounding
-  int temp = (GROSS_PAY + 0.005) * 100;
-  withholdings = temp / 100.0;
+//   int temp = (GROSS_PAY + 0.005) * 100;
+//   withholdings = temp / 100.0;
 
   // compute withholdings
   socialSecurity = SOCIAL_SECURITY * GROSS_PAY;
@@ -62,7 +63,7 @@ int main() {
   withholdings = socialSecurity + mediCare + federalIncomeTax + healthCare;
 
   // rounding
-   temp = (withholdings + 0.005) * 100;
+   int temp = (withholdings + 0.005) * 100;
   withholdings = temp / 100.0;
 
   // result of withholdings
