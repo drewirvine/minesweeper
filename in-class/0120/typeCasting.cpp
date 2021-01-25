@@ -9,7 +9,6 @@
  */
 
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main() {
@@ -40,8 +39,7 @@ int main() {
 //    cout << "---------------------------" << endl << endl;
    
    // block #4 (recall that a short int has range -32768 to 32767)
-   cout << static_cast<char>(97) << endl;
-   cout << static_cast<short>(100000) << endl;
+   cout << (3 + 1 * 5) * (2 / 3) << endl;
 
    return 0;
 }
