@@ -55,13 +55,13 @@ int main() {
     cout << "You have an A in the class and do not need to take the final."
          << endl;
   } else if ((FINAL_GRADE < 90) && (FINAL_GRADE >= 80)) {
-    cout << "You have a B in the class and must take the final." << endl;
+    cout << "You have a B in the class and you must take the final." << endl;
   } else if ((FINAL_GRADE < 80) && (FINAL_GRADE >= 70)) {
-    cout << "You have a C in the class and must take the final." << endl;
+    cout << "You have a C in the class and you must take the final." << endl;
   } else if ((FINAL_GRADE < 70) && (FINAL_GRADE >= 60)) {
-    cout << "You have a D in the class and must take the final." << endl;
+    cout << "You have a D in the class and you must take the final." << endl;
   } else {
-    cout << "You have an F in the class and must take the final." << endl;
+    cout << "You have an F in the class and you must take the final." << endl;
   }
 
   return 0;
