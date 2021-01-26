@@ -51,9 +51,11 @@ int main() {
   FINAL_GRADE = TOTAL_TEST + TOTAL_HOMEWORK + TOTAL_PART;
 
   // branching statements to produce output
-  if ((FINAL_GRADE < 100) && (FINAL_GRADE >= 90)) {
-    cout << "You have an A in the class and you must take the final."
+  if ((FINAL_GRADE < 100) && (FINAL_GRADE >= 90) && (TEST_AVERAGE >= 90)) {
+    cout << "You have an A in the class and you do not need to take the final."
          << endl;
+  } else if ((FINAL_GRADE < 100) && (FINAL_GRADE >= 90)) {
+    cout << "You have an A in the class and you must take the final." << endl;
   } else if ((FINAL_GRADE < 90) && (FINAL_GRADE >= 80)) {
     cout << "You have a B in the class and you must take the final." << endl;
   } else if ((FINAL_GRADE < 80) && (FINAL_GRADE >= 70)) {
