@@ -52,7 +52,7 @@ int main() {
 
   // branching statements to produce output
   if ((FINAL_GRADE < 100) && (FINAL_GRADE >= 90)) {
-    cout << "You have an A in the class and do not need to take the final."
+    cout << "You have an A in the class and you must take the final."
          << endl;
   } else if ((FINAL_GRADE < 90) && (FINAL_GRADE >= 80)) {
     cout << "You have a B in the class and you must take the final." << endl;
