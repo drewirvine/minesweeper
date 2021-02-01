@@ -11,6 +11,7 @@
 #include <ctime>    // form time command to use for random seed
 #include <iomanip>  // for setw command
 #include <iostream> // for cout and cin streams
+#include <ostream>
 using namespace std;
 
 int main() {
@@ -41,14 +42,48 @@ int main() {
   // add your switch statement here to display the correct
   //   type of problem and compute the correct answer
 
-  /* CODE GOES HERE */
-   
-  // check the answer and dsiplay result
+  char operation = ' ';
+
+  switch (choice) {
+  case 1:
+    operation = '+';
+    correct = x + y;
+    cout << "Addition Problem: " << endl;
+    break;
+
+  case 2:
+    operation = '-';
+    correct = x - y;
+    cout << "Subtraction Problem: " << endl;
+    break;
+
+  case 3:
+    operation = '*';
+    correct = x * y;
+    cout << "Multiplication Problem: " << endl;
+    break;
+
+  default:
+    operation = ' ';
+    correct = 0;
+    cout << "Invalid Problem Type." << endl;
+  }
+
+  if(operation != ' ') {
+      cout << setw(6) << x << endl;
+      cout << " " <<operation << setw(4) << y << endl;
+      cout << "------" << endl;
+      cout << " = ";
+      cin >> ans;
+  }
+    cout << endl;
+
+  // check the answer and display result
   if (ans == correct) {
     cout << endl << "Congratulations! You got the right answer." << endl;
-  } else {        
-    cout << "The correct answer is: " << correct << endl;
-  }   
+  } else {
+    cout << endl << "The correct answer is: " << correct << endl;
+  }
 
   return 0;
 }

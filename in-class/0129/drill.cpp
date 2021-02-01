@@ -21,6 +21,7 @@ int main() {
   // generate two random numbers between 0 and 999 and answer variable
   int x = rand() % 1000;
   int y = rand() % 1000;
+  char doWhileLoop = 'p';
 
   // variables for the user's answer and the correct answer
   int ans, correct;
@@ -28,6 +29,7 @@ int main() {
   // variable for menu choice
   int choice;
 
+    do {
   // prompt the user for a type of problem
   cout << "Which type of problem would you like to try?" << endl;
   cout << "  1) Addition" << endl;
@@ -78,7 +80,13 @@ int main() {
     cout << endl << "Congratulations! You got the right answer." << endl;
   } else {        
     cout << "The correct answer is: " << correct << endl;
-  }   
+  }  
+  
+    cout << "Do you want to go again? press 'p' to go again.";
+    cin >> doWhileLoop;
+     } while(doWhileLoop == 'p');
+    
+
 
   return 0;
 }

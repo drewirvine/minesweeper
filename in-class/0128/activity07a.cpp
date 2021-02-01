@@ -8,7 +8,7 @@ int main() {
   cout << "Enter your name: ";
   cin >> name;
   int x = 0;
-  while (x < 10) {
+  while (x < 23) {
     cout << name << endl;
     x = x + 1;
   }
