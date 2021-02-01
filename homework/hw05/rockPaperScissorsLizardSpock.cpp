@@ -30,7 +30,7 @@ int main() {
   srand(seed);
 
   // Main body of text
-  cout << "The computer has chosen and so must you. " << endl;
+  cout << "The computer has chosen and so must you." << endl;
   cout << "  0) Rock" << endl;
   cout << "  1) Paper" << endl;
   cout << "  2) Scissors" << endl;
@@ -75,7 +75,7 @@ int main() {
     break;
   }
 
-  string tie = "-- It's a tie!";
+  string tie = "-- it's a tie!";
   string win = "-- you win!";
   string lose = "-- you lose!";
 
