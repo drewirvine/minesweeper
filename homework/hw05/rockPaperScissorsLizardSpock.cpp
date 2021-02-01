@@ -15,11 +15,11 @@ using namespace std;
 int main() {
 
   int seed;
-  int rock = 0;
-  int paper = 1;
-  int scissors = 2;
-  int lizard = 3;
-  int spock = 4;
+//   int rock = 0;
+//   int paper = 1;
+//   int scissors = 2;
+//   int lizard = 3;
+//   int spock = 4;
   int userValue;
 
   // initialize user seed
@@ -90,47 +90,42 @@ int main() {
       } else {
         result = win;
       }
-     break;
+      break;
     }
     case 1: {
-        if((userValue == 0) || (userValue == 4)) {
-            result = lose;
-        }
-        else {
-            result = win;
-        }
-        break;
+      if ((userValue == 0) || (userValue == 4)) {
+        result = lose;
+      } else {
+        result = win;
+      }
+      break;
     }
     case 2: {
-        if ((userValue == 1) || (userValue == 3)) {
-            result = lose;
-        }
-        else {
-            result = win;
-        }
-        break;
+      if ((userValue == 1) || (userValue == 3)) {
+        result = lose;
+      } else {
+        result = win;
+      }
+      break;
     }
     case 3: {
-        if((userValue == 1) || (userValue == 4)) {
-            result = lose;
-        }
-        else {
-            result = win;
-        }
-        break;
+      if ((userValue == 1) || (userValue == 4)) {
+        result = lose;
+      } else {
+        result = win;
+      }
+      break;
     }
     case 4: {
-        if((userValue == 2) || (userValue == 0)) {
-            result = lose;
-        }
-        else {
-            result = win;
-        }
-        break;
+      if ((userValue == 2) || (userValue == 0)) {
+        result = lose;
+      } else {
+        result = win;
+      }
+      break;
     }
     }
-  } 
-
+  }
 
   cout << message << obj << result << endl;
   return 0;
