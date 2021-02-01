@@ -15,11 +15,11 @@ using namespace std;
 int main() {
 
   int seed;
-//   int rock = 0;
-//   int paper = 1;
-//   int scissors = 2;
-//   int lizard = 3;
-//   int spock = 4;
+  //   int rock = 0;
+  //   int paper = 1;
+  //   int scissors = 2;
+  //   int lizard = 3;
+  //   int spock = 4;
   int userValue;
 
   // initialize user seed
