@@ -37,8 +37,8 @@ int main() {
 
   // collect input
   cout << "Password: ";
-  //   cin >> userPassword;
-  userPassword = "xB69Gl@pr!";
+  cin >> userPassword;
+  //   userPassword = "xB69Gl@pr!";
 
   // duplicate thingy
 
