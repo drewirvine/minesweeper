@@ -73,18 +73,13 @@ int main() {
     hasSpecial = !(isalnum(userPassword.at(i)));
   }
 
-if (size <=10) {
-    cout << "Your password does not meet the above criteria." << endl;
-    return 1;
-}
-
   // display result
-if (lastDigit && hasDigit && hasUpperCase && hasLowerCase && hasSpecial){
-  cout << "Your password has been accepted." << endl;
-}
-else {
+  if (lastDigit && hasDigit && hasUpperCase && hasLowerCase && hasSpecial &&
+      (size <= 10)) {
+    cout << "Your password has been accepted." << endl;
+  } else {
     cout << "Your password does not meet the above criteria." << endl;
-}
+  }
   // end the program
   return 0;
 }
