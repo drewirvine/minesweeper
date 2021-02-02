@@ -65,17 +65,17 @@ int main() {
     }
   }
 
-    // cout << "noConsec: " << noConsecutive << endl;
-    // cout << "hasdigit: " << hasDigit << endl;
-    // cout << "Has upper case: " << hasUpperCase << endl;
-    // cout << "has lower: " << hasLowerCase << endl;
-    // cout << "has special: " << hasSpecial << endl;
-    // cout << "size: " << (size >= 10) << endl;
-    // cout << "size: " << userPassword.size() << endl;
-    // cout << "size: " << size << endl;
+  // cout << "noConsec: " << noConsecutive << endl;
+  // cout << "hasdigit: " << hasDigit << endl;
+  // cout << "Has upper case: " << hasUpperCase << endl;
+  // cout << "has lower: " << hasLowerCase << endl;
+  // cout << "has special: " << hasSpecial << endl;
+  // cout << "size: " << (size >= 10) << endl;
+  // cout << "size: " << userPassword.size() << endl;
+  // cout << "size: " << size << endl;
 
   // display result
-  if ((noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
+  if ((!noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
       hasSpecial && (size >= 10)) {
     cout << "Your password has been accepted." << endl;
   } else {
