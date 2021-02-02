@@ -76,7 +76,7 @@ int main() {
 
   // display result
   if ((noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
-      hasSpecial && (size >= 10)) {
+      hasSpecial && (size > 10)) {
     cout << "Your password has been accepted." << endl;
   } else {
     cout << "Your password does not meet the above criteria." << endl;
