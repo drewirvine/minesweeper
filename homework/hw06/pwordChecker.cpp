@@ -23,14 +23,6 @@ int main() {
   bool hasSpecial = false;
   bool noConsecutive = false;
 
-
-  /* how to check for deplicate characters:
-  if (userPassword.at(10) == userPassword.at(9)) {
-      cout << "password is invalid";
-      return.1
-  }
-*/
-
   // prompt for input
   cout << "Please enter a password with the following characteristics:" << endl;
   cout << "  - at least 10 characters long" << endl;
@@ -48,7 +40,6 @@ int main() {
   cin >> userPassword;
 
   // duplicate thingy
-
 
   // for loop
   int size = userPassword.size();
@@ -79,8 +70,8 @@ int main() {
   // cout << "size: " << (size > 10) << endl;
 
   // display result
-  if (noConsecutive && hasDigit && hasUpperCase && hasLowerCase && hasSpecial &&
-      (size > 10)) {
+  if ((!noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
+      hasSpecial && (size > 10)) {
     cout << "Your password has been accepted." << endl;
   } else {
     cout << "Your password does not meet the above criteria." << endl;
