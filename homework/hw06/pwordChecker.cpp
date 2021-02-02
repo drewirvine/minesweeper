@@ -21,7 +21,7 @@ int main() {
   bool hasLowerCase = false;
   bool hasUpperCase = false;
   bool hasSpecial = false;
-  bool noConsecutive = false;
+  bool noConsecutive = true;
 
   // prompt for input
   cout << "Please enter a password with the following characteristics:" << endl;
@@ -45,7 +45,7 @@ int main() {
   // for loop
   int size = userPassword.size();
   for (int i = 0; i < size - 1; ++i) {
-    if (!noConsecutive) {
+    if (noConsecutive) {
       noConsecutive = userPassword.at(i) != (userPassword.at(i + 1));
     }
   }
@@ -75,8 +75,8 @@ int main() {
   //   cout << "size: " << size << endl;
 
   // display result
-  if ((noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
-      hasSpecial && (size > 10)) {
+  if (noConsecutive && hasDigit && hasUpperCase && hasLowerCase && hasSpecial &&
+      (size > 10)) {
     cout << "Your password has been accepted." << endl;
   } else {
     cout << "Your password does not meet the above criteria." << endl;
