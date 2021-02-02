@@ -52,34 +52,41 @@ int main() {
 
   // for loop
   int size = userPassword.size();
-  for (int i = 0; i < size; ++i) {
-    noConsecutive = ((userPassword.at(i) != lastDigit) && (noConsecutive));
-    lastDigit = userPassword.at(i);
+  for (int i = 0; i < size - 1; ++i) {
+    noConsecutive = userPassword.at(i) != (userPassword.at(i+1));
   }
 
   for (int i = 0; i < size; ++i) {
-    hasDigit = ((isdigit(userPassword.at(i))));
-  }
-
-  for (int i = 0; i < size; ++i) {
+    if (!hasDigit) {
+        hasDigit = ((isdigit(userPassword.at(i)))); 
+    }
+    if (!hasLowerCase) {
     hasLowerCase = ((islower(userPassword.at(i))));
-  }
-
-  for (int i = 0; i < size; ++i) {
+    }
+    if (!hasUpperCase) {
     hasUpperCase = ((isupper(userPassword.at(i))));
-  }
-
-  for (int i = 0; i < size; i++) {
+    }
+    if (!hasSpecial) {
     hasSpecial = !(isalnum(userPassword.at(i)));
+    }
   }
+ 
+
+    // cout << "noConsec: " << noConsecutive << endl;
+    // cout << "hasdigit: " << hasDigit << endl;
+    // cout << "Has upper case: " << hasUpperCase << endl;
+    // cout << "has lower: " << hasLowerCase << endl;
+    // cout << "has special: " << hasSpecial << endl;
+    // cout << "size: " << (size > 10) << endl;
 
   // display result
-  if (lastDigit && hasDigit && hasUpperCase && hasLowerCase && hasSpecial &&
+  if (noConsecutive && hasDigit && hasUpperCase && hasLowerCase && hasSpecial &&
       (size > 10)) {
     cout << "Your password has been accepted." << endl;
   } else {
     cout << "Your password does not meet the above criteria." << endl;
   }
+
   // end the program
   return 0;
 }
