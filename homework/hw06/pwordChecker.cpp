@@ -23,6 +23,7 @@ int main() {
   bool hasSpecial = false;
   bool noConsecutive = false;
 
+
   /* how to check for deplicate characters:
   if (userPassword.at(10) == userPassword.at(9)) {
       cout << "password is invalid";
@@ -48,36 +49,34 @@ int main() {
 
   // duplicate thingy
 
-  char lastDigit = 0;
 
   // for loop
   int size = userPassword.size();
   for (int i = 0; i < size - 1; ++i) {
-    noConsecutive = userPassword.at(i) != (userPassword.at(i+1));
+    noConsecutive = userPassword.at(i) != (userPassword.at(i + 1));
   }
 
   for (int i = 0; i < size; ++i) {
     if (!hasDigit) {
-        hasDigit = ((isdigit(userPassword.at(i)))); 
+      hasDigit = ((isdigit(userPassword.at(i))));
     }
     if (!hasLowerCase) {
-    hasLowerCase = ((islower(userPassword.at(i))));
+      hasLowerCase = ((islower(userPassword.at(i))));
     }
     if (!hasUpperCase) {
-    hasUpperCase = ((isupper(userPassword.at(i))));
+      hasUpperCase = ((isupper(userPassword.at(i))));
     }
     if (!hasSpecial) {
-    hasSpecial = !(isalnum(userPassword.at(i)));
+      hasSpecial = !(isalnum(userPassword.at(i)));
     }
   }
- 
 
-    // cout << "noConsec: " << noConsecutive << endl;
-    // cout << "hasdigit: " << hasDigit << endl;
-    // cout << "Has upper case: " << hasUpperCase << endl;
-    // cout << "has lower: " << hasLowerCase << endl;
-    // cout << "has special: " << hasSpecial << endl;
-    // cout << "size: " << (size > 10) << endl;
+  // cout << "noConsec: " << noConsecutive << endl;
+  // cout << "hasdigit: " << hasDigit << endl;
+  // cout << "Has upper case: " << hasUpperCase << endl;
+  // cout << "has lower: " << hasLowerCase << endl;
+  // cout << "has special: " << hasSpecial << endl;
+  // cout << "size: " << (size > 10) << endl;
 
   // display result
   if (noConsecutive && hasDigit && hasUpperCase && hasLowerCase && hasSpecial &&
