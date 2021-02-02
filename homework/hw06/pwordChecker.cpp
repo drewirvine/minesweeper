@@ -73,6 +73,10 @@ int main() {
     hasSpecial = !(isalnum(userPassword.at(i)));
   }
 
+if (size <=10) {
+    cout << "Your password does not meet the above criteria." << endl;
+    return 1;
+}
   // display result
 
   cout << "Your password has been accepted." << endl;
