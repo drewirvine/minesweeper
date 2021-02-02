@@ -45,7 +45,7 @@ int main() {
   // for loop
   int size = userPassword.size();
   for (int i = 0; i < size - 1; ++i) {
-    if (!noConsecutive) {
+    if (noConsecutive) {
       noConsecutive = userPassword.at(i) != (userPassword.at(i + 1));
     }
   }
@@ -75,7 +75,7 @@ int main() {
   //   cout << "size: " << size << endl;
 
   // display result
-  if ((!noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
+  if ((noConsecutive) && hasDigit && hasUpperCase && hasLowerCase &&
       hasSpecial && (size >= 10)) {
     cout << "Your password has been accepted." << endl;
   } else {
