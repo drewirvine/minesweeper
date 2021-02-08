@@ -50,7 +50,7 @@ int main() {
       }
       cout << endl;
     } else {
-      cout << setw(3) << " " << (i - 1) << " |";
+      cout << setw(4) << (i - 1) << " |";
       for (int j = 0; j < userColumns; j++) {
         cout << setw(4) << (i - 1) * (j + 1);
       }
@@ -58,6 +58,5 @@ int main() {
     }
   }
 
-  cout << endl;
   return 0;
 }
