@@ -24,7 +24,7 @@ int main() {
 
   // Sanitize input so input is between 1-10:
 
-  if ((userColumns > 10) || (userRows < 1)) {
+  if (((userColumns > 10) || (userColumns < 1)) && ((userRows > 10) || (userRows < 1))) {
     cout << "Please enter two integers in the range of 1-10 separated by a "
             "space."
          << endl;
