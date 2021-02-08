@@ -24,7 +24,8 @@ int main() {
 
   // Sanitize input so input is between 1-10:
 
-  if (((userColumns > 10) || (userColumns < 1)) && ((userRows > 10) || (userRows < 1))) {
+  if (((userColumns > 10) || (userColumns < 1)) ||
+      ((userRows > 10) || (userRows < 1))) {
     cout << "Please enter two integers in the range of 1-10 separated by a "
             "space."
          << endl;
@@ -35,7 +36,7 @@ int main() {
 
   // Header
 
-  for (int i = 0; i < userColumns + 2; i++) {
+  for (int i = 0; i < userRows + 2; i++) {
     if (i == 0) {
       cout << setw(6) << "*  ";
       for (int j = 0; j < userColumns; j++) {
