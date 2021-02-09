@@ -17,7 +17,6 @@ int main() {
   // variable declaration
   int userColumns;
   int userRows;
-  bool isValid = 0;
 
   // Ask for input:
   cout << "Enter desired number of columns and rows: ";
