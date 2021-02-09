@@ -17,6 +17,7 @@ int main() {
   // variable declaration
   int userColumns;
   int userRows;
+  bool isValid = 0;
 
   // Ask for input:
   cout << "Enter desired number of columns and rows: ";
@@ -24,13 +25,22 @@ int main() {
 
   // Sanitize input so input is between 1-10:
 
-  if (((userColumns > 10) || (userColumns < 1)) ||
-      ((userRows > 10) || (userRows < 1))) {
+  while (((userColumns > 10) || (userColumns < 1)) ||
+         ((userRows > 10) || (userRows < 1))) {
     cout << "Please enter two integers in the range of 1-10 separated by a "
             "space."
          << endl;
-    return (1);
+
+    return main();
   }
+
+  //   if (((userColumns < 10) || (userColumns > 1)) ||
+  //       ((userRows < 10) || (userRows > 1))) {
+  //     isValid = 1;
+  //   }
+  //   else {
+  //       isValid = 0;
+  //   }
 
   // Contsruct Times Table :)
 
