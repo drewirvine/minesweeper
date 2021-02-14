@@ -45,9 +45,9 @@ int main() {
         done = true;
         break;
       } else if (!(isalpha(userVal))) {
-        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphabet letters are allowed." << endl;
       } else if (tolower(userVal) != userVal) {
-        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphabet letters are allowed." << endl;
       } else {
         setOne.push_back(userVal);
       }
@@ -76,9 +76,9 @@ int main() {
         done = true;
         break;
       } else if (!(isalpha(userVal))) {
-        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphabet letters are allowed." << endl;
       } else if (tolower(userVal) != userVal) {
-        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphabet letters are allowed." << endl;
       } else {
         setTwo.push_back(userVal);
       }
@@ -100,19 +100,25 @@ int main() {
     cout << "The intersection of { ";
     for (int i = 0; i < setOne.size(); i++) {
       cout << setOne.at(i);
-      cout << ", ";
+      if (i < setOne.size()) {
+        cout << ", ";
+      }
     }
     cout << "} and { ";
     for (int i = 0; i < setTwo.size(); i++) {
       cout << setTwo.at(i);
-      cout << ", ";
+      if (i < setTwo.size()) {
+        cout << ", ";
+      }
     }
     cout << "} is { ";
     for (int i = 0; i < setOne.size(); i++) {
       for (int j = 0; j < setTwo.size(); j++) {
         if (setOne.at(i) == setTwo.at(j)) {
           cout << setOne.at(i);
-          cout << ", ";
+          if (i < setOne.size()) {
+            cout << ", ";
+          }
           break;
         }
       }
@@ -122,7 +128,7 @@ int main() {
 
     // prompt the user to see if they want to do another
 
-    cout << "Would you like to compute another intersection (y/n)?";
+    cout << "Would you like to compute another intersection (y/n)? ";
     cin >> redo;
     if (redo == 'n') {
       userDone = true;
