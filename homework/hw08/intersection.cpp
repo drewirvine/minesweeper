@@ -109,10 +109,12 @@ int main() {
       }
     }
     cout << " } is { ";
+    int intersectionCount = 0;
     for (int i = 0; i < setOne.size(); i++) {
       for (int j = 0; j < setTwo.size(); j++) {
         if (setOne.at(i) == setTwo.at(j)) {
           cout << setOne.at(i);
+          intersectionCount++;
           if (i < setOne.size() - 1) {
             cout << ", ";
           }
@@ -120,7 +122,11 @@ int main() {
         }
       }
     }
-    cout << " }.";
+    if (intersectionCount > 0) {
+      cout << " }.";
+    } else {
+      cout << "}.";
+    }
     cout << endl;
 
     // prompt the user to see if they want to do another
