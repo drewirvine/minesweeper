@@ -19,7 +19,6 @@ int main() {
   vector<char> setOne;
   vector<char> setTwo;
   char userVal;
-  bool done = false;
   char redo;
   bool userDone = false;
 
@@ -33,6 +32,7 @@ int main() {
 
   // get set one
   while (!userDone) {
+    bool done = false;
     cout << "Set One (enter ! when done):" << endl;
     cout << "----------------------------" << endl;
     cout << "  Element: ";
