@@ -45,9 +45,9 @@ int main() {
         done = true;
         break;
       } else if (!(isalpha(userVal))) {
-        cout << "This is an error message" << endl; // FIXME
+        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
       } else if (tolower(userVal) != userVal) {
-        cout << "This is an error message" << endl; // FIXME
+        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
       } else {
         setOne.push_back(userVal);
       }
@@ -76,9 +76,9 @@ int main() {
         done = true;
         break;
       } else if (!(isalpha(userVal))) {
-        cout << "This is an error message" << endl; // FIXME
+        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
       } else if (tolower(userVal) != userVal) {
-        cout << "This is an error message" << endl; // FIXME
+        cout << "Error: Only lowercase alphabet letters are allowed." << endl;
       } else {
         setTwo.push_back(userVal);
       }
