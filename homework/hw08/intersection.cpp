@@ -16,10 +16,7 @@ using namespace std;
 int main() {
 
   // define variables
-  vector<char> setOne;
-  vector<char> setTwo;
   char userVal;
-  char redo;
   bool userDone = false;
 
   // setOne.resize(numValsOne); // setting the size of Vector 1
@@ -32,6 +29,8 @@ int main() {
 
   // get set one
   while (!userDone) {
+    vector<char> setOne;
+    vector<char> setTwo;
     bool done = false;
     cout << "Set One (enter ! when done):" << endl;
     cout << "----------------------------" << endl;
@@ -125,7 +124,7 @@ int main() {
     cout << endl;
 
     // prompt the user to see if they want to do another
-
+    char redo;
     cout << "Would you like to compute another intersection (y/n)? ";
     cin >> redo;
     if (redo == 'n') {
