@@ -18,8 +18,6 @@ int main() {
   // define variables
   vector<char> setOne;
   vector<char> setTwo;
-  int numValsOne;
-  int numValsTwo;
   char userVal;
   bool done = false;
   char redo;
@@ -100,14 +98,14 @@ int main() {
     cout << "The intersection of { ";
     for (int i = 0; i < setOne.size(); i++) {
       cout << setOne.at(i);
-      if (i < setOne.size()) {
+      if (i < setOne.size() - 1) {
         cout << ", ";
       }
     }
     cout << "} and { ";
     for (int i = 0; i < setTwo.size(); i++) {
       cout << setTwo.at(i);
-      if (i < setTwo.size()) {
+      if (i < setTwo.size() - 1) {
         cout << ", ";
       }
     }
@@ -116,7 +114,7 @@ int main() {
       for (int j = 0; j < setTwo.size(); j++) {
         if (setOne.at(i) == setTwo.at(j)) {
           cout << setOne.at(i);
-          if (i < setOne.size()) {
+          if (i < setOne.size() - 1) {
             cout << ", ";
           }
           break;
