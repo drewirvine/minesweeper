@@ -102,14 +102,14 @@ int main() {
         cout << ", ";
       }
     }
-    cout << "} and { ";
+    cout << " } and { ";
     for (int i = 0; i < setTwo.size(); i++) {
       cout << setTwo.at(i);
       if (i < setTwo.size() - 1) {
         cout << ", ";
       }
     }
-    cout << "} is { ";
+    cout << " } is { ";
     for (int i = 0; i < setOne.size(); i++) {
       for (int j = 0; j < setTwo.size(); j++) {
         if (setOne.at(i) == setTwo.at(j)) {
