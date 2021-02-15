@@ -121,6 +121,7 @@ int main() {
       cout << "}.";
     }
     cout << endl;
+    cout << endl;
 
     // prompt the user to see if they want to do another
     char redo;
