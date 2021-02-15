@@ -43,9 +43,9 @@ int main() {
         done = true;
         break;
       } else if (!(isalpha(userVal))) {
-        cout << "Error: Only lower case alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphbet letters are allowed." << endl;
       } else if (tolower(userVal) != userVal) {
-        cout << "Error: Only lower case alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphbet letters are allowed." << endl;
       } else {
         setOne.push_back(userVal);
       }
@@ -75,9 +75,9 @@ int main() {
         done = true;
         break;
       } else if (!(isalpha(userVal))) {
-        cout << "Error: Only lower case alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphbet letters are allowed." << endl;
       } else if (tolower(userVal) != userVal) {
-        cout << "Error: Only lower case alphabet letters are allowed." << endl;
+        cout << "Error: Only lower case alphbet letters are allowed." << endl;
       } else {
         setTwo.push_back(userVal);
       }
