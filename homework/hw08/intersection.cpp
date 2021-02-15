@@ -130,6 +130,7 @@ int main() {
     if (redo == 'n') {
       userDone = true;
     }
+    cout << endl;
   }
 
   // end the program
