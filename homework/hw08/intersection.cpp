@@ -27,6 +27,8 @@ int main() {
   cout << "==========================================" << endl;
   cout << "Please enter two sets of lowercase alphabet characters." << endl;
 
+  cout << endl;
+
   // get set one
   while (!userDone) {
     vector<char> setOne;
