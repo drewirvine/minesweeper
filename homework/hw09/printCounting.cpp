@@ -9,18 +9,38 @@
  */
 
 #include <iostream>
+
 using namespace std;
 
-
 // function definitions
+
+void printSkipCount(int firstNumber, int secondNumber) {
+    int largerNum;
+    int smallerNum;
+    if(firstNumber < secondNumber) {
+        smallerNum = firstNumber;
+        largerNum = secondNumber;
+    }
+    else {
+        smallerNum = secondNumber;
+        largerNum = firstNumber;
+    }
+    for (int i = smallerNum; i < largerNum + 1; i++) { // FIXME should be counting up to the second number by the fist number.
+        cout << smallerNum + (2 * i);
+    }
+}
+
+void printFactor(int firstNumber, int secondNumber) {
+//FIXME
+}
 
 
 
 // main program
- 
+
 int main() {
 
-  int firstNumber,secondNumber;
+  int firstNumber, secondNumber;
   char countType, doAgain;
 
   // we will do this until the user is done
@@ -43,7 +63,6 @@ int main() {
       }
     } while (secondNumber < 1);
 
-
     // ask for the type of sum
     do {
 
@@ -62,12 +81,12 @@ int main() {
 
     // Make the function call
     switch (countType) {
-      case 's':
-        printSkipCount(firstNumber,secondNumber);
-        break;
-      case 'f':
-        printFactor(firstNumber,secondNumber);
-        break;
+    case 's':
+      printSkipCount(firstNumber, secondNumber);
+      break;
+    case 'f':
+      printFactor(firstNumber, secondNumber);
+      break;
     }
 
     // should we do this again?
@@ -75,7 +94,6 @@ int main() {
     cin >> doAgain;
 
   } while (doAgain == 'y');
-   
+
   return 0;
-   
 }

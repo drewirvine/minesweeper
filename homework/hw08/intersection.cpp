@@ -34,9 +34,10 @@ int main() {
     bool done = false;
     cout << "Set One (enter ! when done):" << endl;
     cout << "----------------------------" << endl;
-    cout << "  Element: ";
+    // cout << "  Element: ";
 
     while (!done) {
+      cout << "  Element: ";
       cin >> userVal;
       if (userVal == '!') {
         done = true;
@@ -65,9 +66,10 @@ int main() {
 
     cout << "Set Two (enter ! when done):" << endl;
     cout << "----------------------------" << endl;
-    cout << "  Element: ";
+    // cout << "  Element: ";
 
     while (!done) {
+      cout << "  Element: ";
       cin >> userVal;
       if (userVal == '!') {
         done = true;

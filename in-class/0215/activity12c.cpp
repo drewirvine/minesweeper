@@ -2,7 +2,21 @@
 #include <string>
 using namespace std;
 
-/* Missing Function*/
+
+string getMessage(int userNum, int compNum) {
+    string finalMessage;
+    if(userNum < compNum) {
+        finalMessage = "Sorry, the computer value is larger than yours haha.";
+    }
+    else if (userNum > compNum) {
+        finalMessage = "Congrats, you win.";
+    }
+    else {
+        finalMessage = "Your number is the same the computer chose.";
+    }  
+    return finalMessage;
+}
+
 
 int main() {
   int userNum, compNum;
@@ -21,7 +35,7 @@ int main() {
          << compNum << endl;
     cout << "Your number: " 
          << userNum << endl;
-    cout << getMessage(userNum, compNum);
+    cout << getMessage(userNum, compNum) << endl;
     cout << "Try again (y/n)? ";
     cin >> tryAgain;
   } while (tryAgain == 'y');
