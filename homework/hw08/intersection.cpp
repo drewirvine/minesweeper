@@ -83,17 +83,6 @@ int main() {
       }
     }
     cout << endl;
-
-    // COUT SET ONE BUG CHECK
-
-    // cout << "SetTwo debug" << endl;
-    // for(int i = 0; i < setTwo.size(); i++) {
-    //     cout << setTwo.at(i);
-    // }
-    // cout << endl;
-
-    // INTERSECTION
-
     // find and display the intersection of sets one and two
 
     cout << "The intersection of { ";
