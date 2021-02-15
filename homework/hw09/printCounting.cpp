@@ -15,26 +15,28 @@ using namespace std;
 // function definitions
 
 void printSkipCount(int firstNumber, int secondNumber) {
-    int largerNum;
-    int smallerNum;
-    if(firstNumber < secondNumber) {
-        smallerNum = firstNumber;
-        largerNum = secondNumber;
-    }
-    else {
-        smallerNum = secondNumber;
-        largerNum = firstNumber;
-    }
-    for (int i = smallerNum; i < largerNum + 1; i++) { // FIXME should be counting up to the second number by the fist number.
-        cout << smallerNum + (2 * i);
-    }
+
+  if (firstNumber > secondNumber) {
+    cout << "Error: first argument is larger than second argument" << endl;
+    return;
+  }
+
+  for (int i = firstNumber; i <= secondNumber;
+       i += firstNumber) { // FIXME should be counting up to the second number
+                           // by the fist number.
+    cout << i << endl;
+  }
 }
 
 void printFactor(int firstNumber, int secondNumber) {
-//FIXME
+  if (secondNumber % firstNumber == 0) {
+    cout << "Yes, " << firstNumber << " is a factor of " << secondNumber
+         << endl;
+  } else {
+    cout << "No, " << firstNumber << " is not a factor of " << secondNumber
+         << endl;
+  }
 }
-
-
 
 // main program
 
