@@ -1,0 +1,26 @@
+Since 50 is even, we ignore 25
+Since 25 is odd, we add 50 to the product.
+Since 12 is even, we ignore 100
+Since 6 is even, we ignore 200
+Since 3 is odd, we add 400 to the product.
+Since 1 is odd, we add 800 to the product.
+Since 4 is even, we ignore 2
+Since 2 is even, we ignore 4
+Since 1 is odd, we add 8 to the product.
+Since 65543 is odd, we add 234556 to the product.
+Since 32771 is odd, we add 469112 to the product.
+Since 16385 is odd, we add 938224 to the product.
+Since 8192 is even, we ignore 1876448
+Since 4096 is even, we ignore 3752896
+Since 2048 is even, we ignore 7505792
+Since 1024 is even, we ignore 15011584
+Since 512 is even, we ignore 30023168
+Since 256 is even, we ignore 60046336
+Since 128 is even, we ignore 120092672
+Since 64 is even, we ignore 240185344
+Since 32 is even, we ignore 480370688
+Since 16 is even, we ignore 960741376
+Since 8 is even, we ignore 1921482752
+Since 4 is even, we ignore -452001792
+Since 2 is even, we ignore -904003584
+Since 1 is odd, we add -1808007168 to the product.
