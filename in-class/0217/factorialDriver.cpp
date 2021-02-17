@@ -16,21 +16,7 @@ long factorial(int n);
 // main program
 int main() {
 
-  int n = 0;
-  cout << "Enter a number n: ";
-  cin >> n;
-
-  long val = factorial(n);
-  cout << n << "! = " << val << endl;
+cout << factorial(5) << endl;
 
   return 0;
-}
-
-// function definition
-long factorial(int n) {
-  long result = 1;
-  while (n > 0) {
-    result *= n--;
-  }
-  return result;
 }
