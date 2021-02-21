@@ -1,17 +1,7 @@
-Since -4 is even, we ignore 4
-Since -2 is even, we ignore 8
-Since 5 is odd, we add 2 to the product.
-Since 2 is even, we ignore 4
-Since 1 is odd, we add 8 to the product.
-Since -2 is even, we ignore 15
-Since 26 is even, we ignore 0
-Since 13 is odd, we add 0 to the product.
-Since 6 is even, we ignore 0
-Since 3 is odd, we add 0 to the product.
-Since 1 is odd, we add 0 to the product.
-Since 15 is odd, we add 15 to the product.
-Since 7 is odd, we add 30 to the product.
-Since 3 is odd, we add 60 to the product.
-Since 1 is odd, we add 120 to the product.
-Since -4 is even, we ignore 2
-Since -2 is even, we ignore 4
+Since 5 is odd, we add 5 to the product.
+Since 2 is even, we ignore 10
+Since 1 is odd, we add 20 to the product.
+Since -2 is even, we ignore 10
+Since 5 is odd, we add 5 to the product.
+Since 2 is even, we ignore 10
+Since 1 is odd, we add 20 to the product.
