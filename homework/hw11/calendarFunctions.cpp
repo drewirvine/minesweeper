@@ -78,8 +78,9 @@ int daysInMonthAndYear(int month, int year) {
   } else if (month == 2) {
     if (isLeapYear(year)) {
       days = 29;
+    } else {
+      days = 28;
     }
-    days = 28;
   }
 
   return days;

@@ -34,8 +34,9 @@ int dayOfFirst(int month, int year);
 
 int main(int argc, char *argv[]) {
   calendar(10, 2020);
-  //   cout << endl;
-  //   cout << isLeapYear(2020) << endl;
+    cout << endl;
+    cout << isLeapYear(2020) << endl;
+    cout << daysInMonthAndYear(2, 2020) << endl;
   return 0;
 }
 
