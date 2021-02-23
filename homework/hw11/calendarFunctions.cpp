@@ -22,6 +22,7 @@ string nameOfMonth(int month) {
     break;
   case 2:
     str = "February";
+    break;
   case 3:
     str = "March";
     break;
