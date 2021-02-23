@@ -1,28 +1,18 @@
-Since 12 is even, we ignore 7
-Since 6 is even, we ignore 14
-Since 3 is odd, we add 28 to the product.
-Since 1 is odd, we add 56 to the product.
-Since 9876543 is odd, we add 1738 to the product.
-Since 4938271 is odd, we add 3476 to the product.
-Since 2469135 is odd, we add 6952 to the product.
-Since 1234567 is odd, we add 13904 to the product.
-Since 617283 is odd, we add 27808 to the product.
-Since 308641 is odd, we add 55616 to the product.
-Since 154320 is even, we ignore 111232
-Since 77160 is even, we ignore 222464
-Since 38580 is even, we ignore 444928
-Since 19290 is even, we ignore 889856
-Since 9645 is odd, we add 1779712 to the product.
-Since 4822 is even, we ignore 3559424
-Since 2411 is odd, we add 7118848 to the product.
-Since 1205 is odd, we add 14237696 to the product.
-Since 602 is even, we ignore 28475392
-Since 301 is odd, we add 56950784 to the product.
-Since 150 is even, we ignore 113901568
-Since 75 is odd, we add 227803136 to the product.
-Since 37 is odd, we add 455606272 to the product.
-Since 18 is even, we ignore 911212544
-Since 9 is odd, we add 1822425088 to the product.
-Since 4 is even, we ignore -650117120
-Since 2 is even, we ignore -1300234240
-Since 1 is odd, we add 1694498816 to the product.
+Since 9001 is odd, we add 4 to the product.
+Since 4500 is even, we ignore 8
+Since 2250 is even, we ignore 16
+Since 1125 is odd, we add 32 to the product.
+Since 562 is even, we ignore 64
+Since 281 is odd, we add 128 to the product.
+Since 140 is even, we ignore 256
+Since 70 is even, we ignore 512
+Since 35 is odd, we add 1024 to the product.
+Since 17 is odd, we add 2048 to the product.
+Since 8 is even, we ignore 4096
+Since 4 is even, we ignore 8192
+Since 2 is even, we ignore 16384
+Since 1 is odd, we add 32768 to the product.
+Since 10 is even, we ignore 2
+Since 5 is odd, we add 4 to the product.
+Since 2 is even, we ignore 8
+Since 1 is odd, we add 16 to the product.
