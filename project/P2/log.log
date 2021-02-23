@@ -1,18 +1,7 @@
-Since 9001 is odd, we add 4 to the product.
-Since 4500 is even, we ignore 8
-Since 2250 is even, we ignore 16
-Since 1125 is odd, we add 32 to the product.
-Since 562 is even, we ignore 64
-Since 281 is odd, we add 128 to the product.
-Since 140 is even, we ignore 256
-Since 70 is even, we ignore 512
-Since 35 is odd, we add 1024 to the product.
-Since 17 is odd, we add 2048 to the product.
-Since 8 is even, we ignore 4096
-Since 4 is even, we ignore 8192
-Since 2 is even, we ignore 16384
-Since 1 is odd, we add 32768 to the product.
-Since 10 is even, we ignore 2
-Since 5 is odd, we add 4 to the product.
-Since 2 is even, we ignore 8
-Since 1 is odd, we add 16 to the product.
+Since 5 is odd, we add 5 to the product.
+Since 2 is even, we ignore 10
+Since 1 is odd, we add 20 to the product.
+Since -2 is even, we ignore 10
+Since 5 is odd, we add 5 to the product.
+Since 2 is even, we ignore 10
+Since 1 is odd, we add 20 to the product.
