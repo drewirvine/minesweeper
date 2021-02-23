@@ -136,6 +136,7 @@ int move(int room, char direction) {
       return room;
     }
   }
+  return room;
 }
 
 void printMap(int player, int dragon) {
