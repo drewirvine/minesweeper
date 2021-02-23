@@ -68,7 +68,7 @@ bool isLeapYear(int year) {
 }
 
 int daysInMonthAndYear(int month, int year) {
-  int days;
+  int days = 0;
   if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||
       (month == 8) || (month == 10) || (month == 12)) {
     days = 31;
