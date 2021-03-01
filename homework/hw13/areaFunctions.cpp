@@ -13,18 +13,29 @@ using namespace std;
 
 // Area of Circle: Double Radius
 double area(double circleRadius) {
+  if (circleRadius < 0) {
+    return -1.0;
+  }
   return (PI)*pow(circleRadius, 2);
-
 }
 
 // Area of a rectangle: Double Length, Double Width
 double area(double recLength, double recWidth) {
-    return recLength * recWidth;
+  if (recLength < 0 || recWidth < 0) {
+    return -1.0;
+  }
+  return recLength * recWidth;
 }
-
 
 // Area of a triangle: Double side1, double side2, double side3
 double area(double sideOne, double sideTwo, double sideThree) {
-    double s = (sideOne + sideTwo + sideThree) / 2;
-    return sqrt(s * (s-sideOne) * (s - sideTwo) * (s - sideThree));
+  if (sideOne < 0 || sideTwo < 0 || sideThree < 0) {
+    return -1.0;
+  }
+  if (sideOne > sideTwo + sideThree || sideTwo > sideOne + sideThree ||
+      sideThree > sideOne + sideTwo) {
+    return -1.0;
+  }
+  double s = (sideOne + sideTwo + sideThree) / 2;
+  return sqrt(s * (s - sideOne) * (s - sideTwo) * (s - sideThree));
 }
