@@ -7,10 +7,10 @@
  * Course:     CPTR 141
  *
  */
+#include <cmath>
 #include <iostream>
 #include <ostream>
 #include <string>
-#include <cmath>
 using namespace std;
 
 /*---------------------------------------------------------------------------
@@ -29,25 +29,25 @@ void getPoint(int, double &, double &);
 double lineInfo(double, double, double, double, double &, double &);
 
 // The main program
-int main() { 
-    double x1;
-    double y1;
-    double x2;
-    double y2;
-    double xMid;
-    double yMid;
-    double lineLength;
-    getPoint(1, x1, y1);
-    // cout << x1 << endl;
-    // cout << y1 << endl;
-    getPoint(2, x2, y2);
-    // cout << x2 << endl;
-    // cout << y2 << endl;
+int main() {
+  double x1;
+  double y1;
+  double x2;
+  double y2;
+  double xMid;
+  double yMid;
+  double lineLength;
+  getPoint(1, x1, y1);
+  // cout << x1 << endl;
+  // cout << y1 << endl;
+  getPoint(2, x2, y2);
+  // cout << x2 << endl;
+  // cout << y2 << endl;
 
-    lineLength = lineInfo(x1, x2, y1, y2, xMid, yMid);
-    cout << "The line segment length is: " << lineLength << endl;
-    cout << "The midpoint is: (" << xMid << "," << yMid << ")" << endl;
-    return 0; 
+  lineLength = lineInfo(x1, x2, y1, y2, xMid, yMid);
+  cout << "The line segment length is: " << lineLength << endl;
+  cout << "The midpoint is: (" << xMid << "," << yMid << ")" << endl;
+  return 0;
 }
 
 // define functions
@@ -55,29 +55,28 @@ void getPoint(int point, double &xOut, double &yOut) {
   double x;
   double y;
   char trash;
-  bool invalid = true;
-  
-    cout << "Enter a point number " << point << " in the form (x,y): ";
-    cin >> trash >> x >> trash >> y >> trash;
-    // if (!cin) {
-    //     cout << "Invalid input " << endl;
-    //     invalid = true;
-    //     cin.clear();
-    //     cin.ignore(1000 , '\n');
-    // } else {
-    //     invalid = false;
-    // }
-  
+
+  cout << "Enter a point number " << point << " in the form (x,y): ";
+  cin >> trash >> x >> trash >> y >> trash;
+  // if (!cin) {
+  //     cout << "Invalid input " << endl;
+  //     invalid = true;
+  //     cin.clear();
+  //     cin.ignore(1000 , '\n');
+  // } else {
+  //     invalid = false;
+  // }
+
   xOut = x;
   yOut = y;
 }
 
-double lineInfo(double x1, double y1, double x2, double y2, double &xMid, double &yMid) {
-    // finding the midpoints
-    xMid = (x1 + x2) / 2;
-    yMid = (y1 + y2) / 2;
+double lineInfo(double x1, double y1, double x2, double y2, double &xMid,
+                double &yMid) {
+  // finding the midpoints
+  xMid = (x1 + x2) / 2.0;
+  yMid = (y1 + y2) / 2.0;
 
-    // Calculating the line length
-    return sqrt(pow(x2 - x1 ,2) + (pow(y2 -y1,2)));
-    
+  // Calculating the line length
+  return sqrt(pow(x2 - x1, 2) + (pow(y2 - y1, 2)));
 }
