@@ -8,6 +8,7 @@
  *
  */
 #include <cmath>
+#include <iomanip>
 #include <iostream>
 #include <ostream>
 #include <string>
@@ -45,8 +46,10 @@ int main() {
   // cout << y2 << endl;
 
   lineLength = lineInfo(x1, x2, y1, y2, xMid, yMid);
-  cout << "The line segment length is: " << lineLength << endl;
-  cout << "The midpoint is: (" << xMid << "," << yMid << ")" << endl;
+  cout << "The line segment length is: " << fixed << setprecision(3)
+       << lineLength << endl;
+  cout << "The midpoint is: (" << fixed << setprecision(3) << xMid << ","
+       << fixed << setprecision(3) << yMid << ")" << endl;
   return 0;
 }
 
@@ -71,7 +74,7 @@ void getPoint(int point, double &xOut, double &yOut) {
   yOut = y;
 }
 
-double lineInfo(double x1, double y1, double x2, double y2, double &xMid,
+double lineInfo(double x1, double x2, double y1, double y2, double &xMid,
                 double &yMid) {
   // finding the midpoints
   xMid = (x1 + x2) / 2.0;
