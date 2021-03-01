@@ -13,6 +13,15 @@ using namespace std;
 const double PI = 3.14159;
 
 int main() {
-    /* test your functions here */
-    return 0;
+//    double circleArea = area(4.0);
+//     cout << circleArea << endl;
+//     return 0;
+
+// double recArea = area(4.0 , 5.0);
+// cout << recArea << endl;
+// return 0;
+
+double triArea = area (3.0, 5.0, 6.0);
+cout << triArea << endl;
+return 0;
 }
