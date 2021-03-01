@@ -25,21 +25,20 @@
 #include <iostream> // for cin and cout
 using namespace std;
 
-/* POINT A */
+char varOne = 'A';
 
 int main() {
   
   int varOne;
   varOne = -1;
   
-  /* POINT B */
+  
 
   {
   
-    /* POINT C */
 
   }
 
-  /* POINT D */
+  cout << varOne << endl;
 
 }
