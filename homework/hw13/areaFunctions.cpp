@@ -25,5 +25,6 @@ double area(double recLength, double recWidth) {
 
 // Area of a triangle: Double side1, double side2, double side3
 double area(double sideOne, double sideTwo, double sideThree) {
-    return (sideOne * sideTwo) / 2;
+    double s = (sideOne + sideTwo + sideThree) / 2;
+    return sqrt(s * (s-sideOne) * (s - sideTwo) * (s - sideThree));
 }
