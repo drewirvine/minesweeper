@@ -29,9 +29,27 @@ int main() {
 
     // Find and display the lowest score for each student
     cout << "Lowest Scores" << endl;
+    for (int student = 0; student < STUDENTS; student++) {
+        int min = 100;
+        for (int score = 0; score < SCORES; score++) {
+            if(grades[student][score] < min) {
+                min = grades[student][score];
+            }
+        }
+        cout << "  Student " << (student + 1) << ": " << min << endl;
+    }
 
     // Find and display the highest overall score
     cout << "Highest Overall Score: ";
+    for (int student = 0; student < STUDENTS; student++) {
+        int max = 100;
+        for (int score = 0; score < SCORES; score++) {
+            if(grades[student][score] > max) {
+                max = grades[student][score];
+            }
+        }
+        cout << "  Student " << (student + 1) << ": " << max << endl;
+    }
   
     // end program
     return 0;

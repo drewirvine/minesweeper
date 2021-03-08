@@ -1,6 +1,5 @@
-Since 54 is even, we ignore 45
-Since 27 is odd, we add 90 to the product.
-Since 13 is odd, we add 180 to the product.
-Since 6 is even, we ignore 360
-Since 3 is odd, we add 720 to the product.
-Since 1 is odd, we add 1440 to the product.
+Since 23 is odd, we add 84 to the product.
+Since 11 is odd, we add 168 to the product.
+Since 5 is odd, we add 336 to the product.
+Since 2 is even, we ignore 672
+Since 1 is odd, we add 1344 to the product.

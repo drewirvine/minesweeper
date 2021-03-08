@@ -1,0 +1,9 @@
+Please enter a password with the following characteristics:
+  - at least 10 characters long
+  - contains at least one digit
+  - contains at least one lower-case letter
+  - contains at least one upper-case letter
+  - contains at least one non-alphanumeric character
+  - does not contain any consecutive duplicate characters (e.g. 'aa')
+
+Password: 
