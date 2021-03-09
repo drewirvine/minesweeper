@@ -15,7 +15,7 @@
 using namespace std;
 
 double mean(int a[], int size) { // average = sum / count
-  double sum;
+  double sum = 0.0;
   for (int i = 0; i < size; i++) {
     sum += a[i];
   }
@@ -88,11 +88,11 @@ double median(int a[], int size) { // Middle value
 //    printLine();
 // }
 
-int main() {
-  int a[]{1, 2, 3, 4, 5, 6};
-  cout << "The average is: " << mean(a, 6);
-  cout << endl;
+// int main() {
+//   int a[]{3,5,4,6,2,1};
+//   cout << "The average is: " << mean(a, 6);
+//   cout << endl;
 
-  cout << "The median is: " << median(a, 6);
-  cout << endl;
-}
+//   cout << "The median is: " << median(a, 6);
+//   cout << endl;
+// }
