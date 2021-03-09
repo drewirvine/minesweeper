@@ -88,11 +88,11 @@ double median(int a[], int size) { // Middle value
 //    printLine();
 // }
 
-// int main() {
-//   int a[]{3,5,4,6,2,1};
-//   cout << "The average is: " << mean(a, 6);
-//   cout << endl;
+int main() {
+  int a[]{8,77,5,24,15};
+  cout << "The average is: " << mean(a, 6);
+  cout << endl;
 
-//   cout << "The median is: " << median(a, 6);
-//   cout << endl;
-// }
+  cout << "The median is: " << median(a, 6);
+  cout << endl;
+}
