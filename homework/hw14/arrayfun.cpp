@@ -46,6 +46,7 @@ double median(int a[], int size) { // Middle value
   int index = ((size + 1) / 2) - 1; // make it zero index
   return a[index];
 }
+// sorting function from zybooks
 
 // void SelectionSort(int numbers[], int numbersSize) {
 //   int indexSmallest = 0;
