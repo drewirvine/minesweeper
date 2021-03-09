@@ -43,7 +43,7 @@ double median(int a[], int size) { // Middle value
     a[i] = a[indexSmallest];
     a[indexSmallest] = temp;
   }
-  int index = (size + 1) / 2;
+  int index = ((size + 1) / 2) - 1; // make it zero index
   return a[index];
 }
 
