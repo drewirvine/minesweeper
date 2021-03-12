@@ -15,10 +15,9 @@ using namespace std;
 
 int main() {
 
-  // declare variables
+int value = 10; 
+printf("%d", value);
+cout << endl;
 
-  // open the file
-
-  // read a line at a time and process it
-
+return 0;
 }

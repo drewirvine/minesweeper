@@ -13,7 +13,7 @@ function estimatePi(terms) {
 
 /* JavaScript function to test the estimatePi() function above */
 function testEstimatePi() {
-  var vals = [ -1, 0, 1, 2, 10, 100 ];
+  var vals = [ -1, 0, 1, 2, 10, 100, 1000 ];
   for (var i = 0; i < vals.length; i++ ) {
     console.log( vals[i] + " " + estimatePi(vals[i]) );
   }
