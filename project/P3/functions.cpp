@@ -14,7 +14,7 @@ int amountOfMines;
 
 const int MAX_SIDE = 16;
 const int MAX_MINES = 40;
-const int MOVING_SIZE = 301; // 20 x 20 - 99
+const int MOVING_SIZE = 216; // 20 x 20 - 99
 
 /******************************
  *
@@ -34,48 +34,63 @@ bool isValid(int row, int col) {
  *
  */
 
- bool saveGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE], int boardSizeLength){
-    ofstream fout;
-    fout.open("minesweeperGame.txt");
-    if(!fout.is_open()){
-        cout << "The file could not be opened" << endl;
-        return false;
-    }
-    
+bool saveGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE],
+              int boardSizeLength) {
+  ofstream fout;
+  fout.open("minesweeperGame.txt");
+  if (!fout.is_open()) {
+    cout << "The file could not be opened" << endl;
+    return false;
+  }
 
-    for (int i = 0; i < boardSizeLength; i++) {
-        for (int j = 0; j < boardSizeLength; j++){
-            fout << mineBoard[i][j];
-        }
+  for (int i = 0; i < boardSizeLength; i++) {
+    for (int j = 0; j < boardSizeLength; j++) {
+      fout << mineBoard[i][j];
     }
-    fout << endl;
-    for (int i = 0; i < boardSizeLength; i++) {
-        for (int j = 0; j < boardSizeLength; j++){
-            fout << userBoard[i][j];
-        }
+  }
+  fout << endl;
+  for (int i = 0; i < boardSizeLength; i++) {
+    for (int j = 0; j < boardSizeLength; j++) {
+      fout << userBoard[i][j];
     }
-    fout.close();
-    return true;
+  }
+  fout.close();
+  return true;
 }
 
-bool loadGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE]){
-    ofstream fout;
-    ifstream fin;
-    fin.open("minesweeperGame.txt");
-    if(!fin.is_open()){
-        cout << "The file could not be opened" << endl;
-        return false;
+bool loadGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE], int mines[0][2]) {
+  ofstream fout;
+  ifstream fin;
+  fin.open("minesweeperGame.txt");
+  if (!fin.is_open()) {
+    cout << "The file could not be opened" << endl;
+    return false;
+  }
+  string input;
+  fin >> input;
+  boardSizeLength = sqrt(input.size());
+  // count number of mines
+  amountOfMines = 0;
+  for (int i = 0; i < input.size(); i++) {
+      if (input[i] == '@') {
+          mines[amountOfMines][0] = i / boardSizeLength;
+          mines[amountOfMines][1] = i % boardSizeLength;
+          amountOfMines++;
+      }
+  }
+  for (int i = 0; i < boardSizeLength; i++) {
+    for (int j = 0; j < boardSizeLength; j++) {
+      mineBoard[i][j] = input[i * boardSizeLength + j];
     }
-    string input;
-    fin >> input;
-    int boardLength = sqrt(input.size());
-    for (int i = 0; i < boardLength; i++) {
-        for (int j = 0; j < boardLength; j++){
-            fout << mineBoard[i][j];
-        }
+  }
+  fin >> input;
+  for (int i = 0; i < boardSizeLength; i++) {
+    for (int j = 0; j < boardSizeLength; j++) {
+      userBoard[i][j] = input[i * boardSizeLength + j];
     }
-    
-    return true; 
+  }
+
+  return true;
 }
 
 /******************************
@@ -104,7 +119,8 @@ bool isMine(int row, int col, char board[][MAX_SIDE]) {
  *
  */
 
-bool wayMaker(int &x, int &y, char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE]) {
+bool wayMaker(int &x, int &y, char mineBoard[][MAX_SIDE],
+              char userBoard[][MAX_SIDE]) {
   cout << "------------------" << endl;
   cout << "Get ready to Move!" << endl;
   cout << "------------------" << endl;
@@ -112,9 +128,9 @@ bool wayMaker(int &x, int &y, char mineBoard[][MAX_SIDE], char userBoard[][MAX_S
   cout << endl;
   cout << "Row Number: ";
   cin >> x;
-  if(x == 0) {
-      saveGame(mineBoard, userBoard, boardSizeLength);
-      return false;
+  if (x == 0) {
+    saveGame(mineBoard, userBoard, boardSizeLength);
+    return false;
   }
   cout << "Column Number: ";
   cin >> y;
@@ -122,7 +138,6 @@ bool wayMaker(int &x, int &y, char mineBoard[][MAX_SIDE], char userBoard[][MAX_S
   y = y - 1;
   return true;
 }
-
 
 /******************************
  *
@@ -373,7 +388,7 @@ int neighborMines(int row, int col, int mines[][2],
  *
  *
  */
-// FIXME
+
 void printUserBoard(char userBoard[][MAX_SIDE]) {
 
   for (int i = -1; i < boardSizeLength; i++) {
@@ -393,14 +408,6 @@ void printUserBoard(char userBoard[][MAX_SIDE]) {
   cout << endl;
 }
 
-// int main() {
-//     boardSizeLength = 8;
-//   char userBoard[boardSizeLength][MAX_SIDE];
-//   char mineBoard[boardSizeLength][MAX_SIDE];
-//   resetGame(userBoard, mineBoard);
-//   printUserBoard(userBoard);
-//   return 0;
-// }
 
 /******************************
  *
@@ -418,7 +425,8 @@ bool gameTime(char userBoard[][MAX_SIDE], char mineBoard[][MAX_SIDE],
   if (mineBoard[row][col] == '@') {
     userBoard[row][col] = '@';
 
-    for (int i = 0; i < boardSizeLength; i++) {
+    cout << "amountOfMines: " << amountOfMines << endl;
+    for (int i = 0; i < amountOfMines; i++) {
       userBoard[mines[i][0]][mines[i][1]] = '@';
     }
     printUserBoard(userBoard);
@@ -500,7 +508,6 @@ bool gameTime(char userBoard[][MAX_SIDE], char mineBoard[][MAX_SIDE],
   return false;
 }
 
-
 int main() {
   bool gameOver = false;
   char mineBoard[MAX_SIDE][MAX_SIDE];
@@ -510,33 +517,32 @@ int main() {
   int y;
   int mines[MAX_MINES][2];
 
- int welcomeChoice = welcome(mineBoard, userBoard);
-  
-if (welcomeChoice == 2) {
-  loadGame(mineBoard, userBoard);
-}else {
-  while (!chooseBoardSize())
-    ;
+  int welcomeChoice = welcome(mineBoard, userBoard);
 
-  resetGame(mineBoard, userBoard);
+  if (welcomeChoice == 2) {
+    loadGame(mineBoard, userBoard, mines);
+  } else {
+    while (!chooseBoardSize())
+      ;
 
-  placeMines(mines, mineBoard);
+    resetGame(mineBoard, userBoard);
 
-  // if you wanna cheat comment out the function below
+    placeMines(mines, mineBoard);
+
+    // if you wanna cheat comment out the function below
     // cheater(mineBoard);
-}
+  }
 
   int currentMoveSpot = 0;
   while (gameOver == false) {
-      cout << endl;
+    cout << endl;
     cout << "Here's what the board looks like: " << endl;
     cout << "----------------------------------" << endl;
     printUserBoard(userBoard);
-    if(!wayMaker(x, y, mineBoard, userBoard)){
-        cout << "Game over and saved" << endl;
-        return 0;
+    if (!wayMaker(x, y, mineBoard, userBoard)) {
+      cout << "Game over and saved" << endl;
+      return 0;
     }
-
 
     if (currentMoveSpot == 0) {
       if (isMine(x, y, mineBoard) == true) {
