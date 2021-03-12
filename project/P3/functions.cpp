@@ -12,9 +12,11 @@ using namespace std;
 int boardSizeLength;
 int amountOfMines;
 
-const int MAX_SIDE = 16;
+const int MAX_SIDE = 12;
 const int MAX_MINES = 40;
-const int MOVING_SIZE = 216; // 20 x 20 - 99
+const int MOVING_SIZE = 104; // 12 x 12 = 104 - 40
+
+bool isLoad = false;
 
 /******************************
  *
@@ -58,7 +60,8 @@ bool saveGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE],
   return true;
 }
 
-bool loadGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE], int mines[0][2]) {
+bool loadGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE],
+              int mines[0][2]) {
   ofstream fout;
   ifstream fin;
   fin.open("minesweeperGame.txt");
@@ -72,15 +75,17 @@ bool loadGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE], int mines[
   // count number of mines
   amountOfMines = 0;
   for (int i = 0; i < input.size(); i++) {
-      if (input[i] == '@') {
-          mines[amountOfMines][0] = i / boardSizeLength;
-          mines[amountOfMines][1] = i % boardSizeLength;
-          amountOfMines++;
-      }
+    if (input[i] == '@') {
+      mines[amountOfMines][0] = i / boardSizeLength;
+      mines[amountOfMines][1] = i % boardSizeLength;
+      amountOfMines++;
+    }
   }
   for (int i = 0; i < boardSizeLength; i++) {
     for (int j = 0; j < boardSizeLength; j++) {
       mineBoard[i][j] = input[i * boardSizeLength + j];
+      //   cout << "(" << i << ", " << "(" << j << ") " << input[(i *
+      //   (boardSizeLength - 1)) + j] << endl;
     }
   }
   fin >> input;
@@ -89,7 +94,7 @@ bool loadGame(char mineBoard[][MAX_SIDE], char userBoard[][MAX_SIDE], int mines[
       userBoard[i][j] = input[i * boardSizeLength + j];
     }
   }
-
+  isLoad = true;
   return true;
 }
 
@@ -113,6 +118,7 @@ bool isMine(int row, int col, char board[][MAX_SIDE]) {
   }
 }
 
+string whyQuit;
 /******************************
  *
  *
@@ -124,15 +130,23 @@ bool wayMaker(int &x, int &y, char mineBoard[][MAX_SIDE],
   cout << "------------------" << endl;
   cout << "Get ready to Move!" << endl;
   cout << "------------------" << endl;
-  cout << "Press '0' to save" << endl;
+  cout << "Press '0' to quit and save" << endl;
+  cout << "Press '-1' to quit without saving" << endl;
   cout << endl;
   cout << "Row Number: ";
   cin >> x;
   if (x == 0) {
     saveGame(mineBoard, userBoard, boardSizeLength);
+    // cout << "Game Saved" << endl;
+    whyQuit = "Game Saved";
     return false;
   }
-  cout << "Column Number: ";
+  if (x == -1) {
+    //   cout << "User quit" << endl;
+      whyQuit = "User Quit";
+      return false;
+  }
+    cout << "Column Number: ";
   cin >> y;
   x = x - 1;
   y = y - 1;
@@ -195,16 +209,16 @@ bool chooseBoardSize() { // function to choose the board size
   cout << "-----------------------" << endl;
   cout << "Recommended Sizes" << endl;
   cout << "(Easy = 8x8)" << endl;
-  cout << "(Medium = 12x12)" << endl;
-  cout << "(Hard = 16x16)" << endl;
+  cout << "(Hard = 12x12)" << endl;
   cout << endl;
   cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-  cout << "NOTE: board sizes must be between 6 and 16." << endl;
+  cout << "NOTE: board sizes must be between 6 and 12." << endl;
   cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
   cout << endl;
-  cout << "Becuase of the challenging code, please enter one number that we "
-          "will use to make a square. "
-       << endl;
+  //   cout << "Becuase of the challenging code, please enter one number that we
+  //   "
+  //           "will use to make a square. "
+  //        << endl;
   cout << endl;
   do {
     cout << "Board Size: ";
@@ -214,8 +228,8 @@ bool chooseBoardSize() { // function to choose the board size
       amountOfMines = 10;
     } else if (boardSizeLength > 8 && boardSizeLength <= 12) {
       amountOfMines = 40;
-    } else if (boardSizeLength > 12 && boardSizeLength <= 16) {
-      amountOfMines = 99;
+      // } else if (boardSizeLength > 12 && boardSizeLength <= 16) {
+      //   amountOfMines = 99;
     } else { // Checking for the min and max allowed size
       cout << endl;
       cout << "================================================================"
@@ -408,7 +422,6 @@ void printUserBoard(char userBoard[][MAX_SIDE]) {
   cout << endl;
 }
 
-
 /******************************
  *
  *
@@ -540,13 +553,15 @@ int main() {
     cout << "----------------------------------" << endl;
     printUserBoard(userBoard);
     if (!wayMaker(x, y, mineBoard, userBoard)) {
-      cout << "Game over and saved" << endl;
+      cout << "Game over" << " -- " << whyQuit << endl;
       return 0;
     }
 
     if (currentMoveSpot == 0) {
       if (isMine(x, y, mineBoard) == true) {
-        mineReplace(x, y, mineBoard);
+        if (isLoad == false) {
+          mineReplace(x, y, mineBoard);
+        }
       }
     }
     currentMoveSpot++;
@@ -571,3 +586,13 @@ int main() {
   } while (userDone != 1 || userDone != 2);
   return 0;
 }
+
+// Sources Cited
+// https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game/
+// stackoverflow.com
+// cplusplus.com
+// zybooks.com
+
+// Notes
+// overall this game took me 18 hours in total to program over the last 3 days
+// and brought me much pain and I believe it works as it's supposed to.
