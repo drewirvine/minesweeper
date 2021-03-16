@@ -21,7 +21,7 @@ bool isLoad = false;
 /******************************
  *
  *
- *
+ * 
  */
 // function to check if the cell is valid
 bool isValid(int row, int col) {
