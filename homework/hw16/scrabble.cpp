@@ -16,7 +16,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
   if (argc != 3) {
-    cerr << "ERROR: You must supply two file names on the command line" << endl;
+    cerr << "ERRROR: You must supply two file names on the command line" << endl;
     return 1;
   }
   ifstream fin;
