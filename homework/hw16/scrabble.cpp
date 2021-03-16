@@ -15,6 +15,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
+  if (argc != 3) {
+    cout << "ERROR: You must supply two file names on the command line" << endl;
+    return 1;
+  }
   ifstream fin;
   fin.open("letters.txt");
   vector<int> letterPoints;
@@ -35,7 +39,7 @@ int main(int argc, char *argv[]) {
     getline(fin, word, '\n');
     int sum = 0;
     for (int i = 0; i < word.size(); i++) {
-        sum += letterPoints.at(word[i] - 97);
+      sum += letterPoints.at(word[i] - 97);
     }
     fout << word << ' ' << sum << endl;
   }
