@@ -11,12 +11,14 @@
  */
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <vector>
 using namespace std;
 
 int main(int argc, char *argv[]) {
   if (argc != 3) {
-    cerr << "ERRROR: You must supply two file names on the command line" << endl;
+    cerr << "ERRROR: You must supply two file names on the command line"
+         << endl;
     return 1;
   }
   ifstream fin;
@@ -24,10 +26,13 @@ int main(int argc, char *argv[]) {
   vector<int> letterPoints;
   string trash;
   string point;
+  int pointTwo;
   for (int i = 0; i < 26; i++) {
     getline(fin, trash, ' ');
     getline(fin, point, '\n');
-    letterPoints.push_back(static_cast<int>(point[0]) - 48);
+    stringstream str(point);
+    str >> pointTwo;
+    letterPoints.push_back(pointTwo);
   }
 
   fin.close();
