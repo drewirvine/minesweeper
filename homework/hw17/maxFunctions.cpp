@@ -8,6 +8,7 @@
 
 #include "maxFunctions.h"
 #include <sstream>
+#include <string>
 using namespace std;
 
 int findMax(string maxFind) {
@@ -25,9 +26,16 @@ int findMax(string maxFind) {
   return maxValue;
 }
 
-// string getSet(const int array[], int num) {
-//   string mainString = "{ ";
-//   for (int i = 0; i < sizeof(array); i++) {
-//     string mainString += num;
-//   }
-// }
+string getSet(const int array[], int size) {
+  string mainString = "{ ";
+  for (int i = 0; i < size; i++) {
+    mainString.append(to_string(array[i]));
+
+    if (i == size - 1) {
+      mainString.append(" }");
+    } else {
+      mainString.append(", ");
+    }
+  }
+  return mainString;
+}
