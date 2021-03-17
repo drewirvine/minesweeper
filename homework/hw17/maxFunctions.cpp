@@ -35,11 +35,10 @@ string getSet(const int array[], int size) {
   for (int i = 0; i < size; i++) {
     mainString.append(to_string(array[i]));
 
-    if (i == size - 1) {
-      mainString.append(" }");
-    } else {
+    if (i < size - 1) {
       mainString.append(", ");
     }
   }
+  mainString.append(" }");
   return mainString;
 }
