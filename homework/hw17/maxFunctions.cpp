@@ -25,9 +25,9 @@ int findMax(string maxFind) {
   return maxValue;
 }
 
-string getSet(const int array[], int num) {
-  string mainString = "{ ";
-  for (int i = 0; i < sizeof(array); i++) {
-    string mainString += num;
-  }
-}
+// string getSet(const int array[], int num) {
+//   string mainString = "{ ";
+//   for (int i = 0; i < sizeof(array); i++) {
+//     string mainString += num;
+//   }
+// }
