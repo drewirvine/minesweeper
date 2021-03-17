@@ -39,6 +39,6 @@ string getSet(const int array[], int size) {
       mainString.append(", ");
     }
   }
-  mainString.append(" }");
+  mainString.append("}");
   return mainString;
 }
