@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <cmath>
 #include <fstream>
 #include <iomanip>
