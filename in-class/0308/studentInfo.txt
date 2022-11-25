@@ -1,9 +1,0 @@
-Name: Billy Maximoff
-Student ID: 123457
-
-Name: Drew Irvine
-Student ID: 123456
-
-Name: hello world
-Student ID: 2356
-
